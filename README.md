@@ -1,16 +1,20 @@
 # IoT-based-Motion-Sensor
-This project is based on IoT(Internet of Things).In this an intruder alarm is made using ESP8266 microcontroller, PIR Motion sensor and Buzzer (as important components) etc .
+We have made an intruder alarm using ESP8266 microcontroller, PIR Motion sensor and Buzzer. The microcontroller send a notification on the phone through IFTTT Webhooks and also sound the buzzer when motion is detected. 
+
+![](images/10.png)
 
 ## Table of contents
 1.	Project at a glance…
 2.	Principle
 3.	Hardware required
-4.	Working theory
-5.	Circuit and its connections
+4. Working of the Project (Video)
+5.	Working theory
+6.	Circuit and its connections
   - a.	Connections of PIR sensor
   - b.	Connections of LED
   - c.	Connections of Buzzer
-6.	IFTTT Applet creation
+7.	IFTTT Applet creation
+8. Flow diagram 
 
 ### 1.	Project at a glance…
 
@@ -83,7 +87,11 @@ Also Breadboard can also be used without soldering, which makes it easy to remov
 
 Jumper wires are simply wires that have connector pins at each end, allowing them to be used to connect to each other without soldering. Jumper wires are typically used with breadboards and other prototyping tools in order to make it easy to change a circuit as needed.
 
-### 4. Working Theory
+### 4. Working of the Project (Video)....
+
+[IoT Based Motion Sensor with Alarm](https://drive.google.com/file/d/1fY5F2x0Ho4aXHedM_CF8Du8moMfscXan/view?usp=sharing "Click to view Google Drive Link")
+
+### 5. Working Theory
 
 ![](images/10.png)
 
@@ -92,7 +100,7 @@ Jumper wires are simply wires that have connector pins at each end, allowing the
 * We have programmed the NodeMCU to make an HTTP GET request to our IFTTT Webhooks app.
 * Whenever the HTTP GET request has been made then it will trigger a notification alert on our mobile phone or the device connected.
 
-### 5.	Circuit and its connections
+### 6.	Circuit and its connections
 
 ![](images/11.jpg)
 
@@ -111,17 +119,25 @@ Jumper wires are simply wires that have connector pins at each end, allowing the
 *	Connect positive of Buzzer to 3.3 Volts of NodeMCU.
 *	Connect input of Buzzer to pin D7 (GPIO13) of NodeMCU.
 
-### 6.  IFTTT Applet Creation
+### 7.  IFTTT Applet Creation
  * Download the Android app from Play Store
  * Create an Account (If you don't have a account)
  
  1. Click on your profile icon and select the create option.
  
+ <img src="images/13.png" width="400" >
+ 
  2. Now click on + This
+ 
+ <img src="images/14.png" width="400" >
  
  3. Search for "Webhooks" and select it.
  
+ <img src="images/15.png" width="400" >
+ 
  4. Choose trigger option, "Receive a Web Request" .
+ 
+ <img src="images/16.png" width="400" >
  
  5. Give a name to your event. In our case we have used "motion_detected"
  
@@ -130,10 +146,32 @@ Jumper wires are simply wires that have connector pins at each end, allowing the
  7. Now from “choose action service”,
    
  8. Search for notification in the search box and click on the notification icon.
-    • Note that you must be installed and logged in the IFTTT app on your           phone for the notifications to work.
+    * Note that you must be installed and logged in the IFTTT app on your phone for the notifications to work.
+    
+    <img src="images/17.png" width="400" >
     
  9. Choose Simple Notification
  
- 10. Type the custom message you want to receive the notification.
+ 10. Type the custom message you want to receive the notification.(In our case we have written "Motion Detected")
+ 
+     <img src="images/18.png" width="400" >
  
  11. Click Finish.
+
+####   Obtaining the HTTP GET request URL
+
+1. Log in to your IFTT account
+ 
+ 2. Click on profile and choose "My Services"
+ 
+ 3. Select Webhooks
+ 
+ 4. Click on Documentation
+ 
+ 5. Now replace "{event}" with the your even name in Step 5 of IFTTT Applet creation
+ 
+ 6. Now copy the key and paste it in the code
+ 
+### 7. Flow diagram 
+ 
+ ![](images/23.png)
