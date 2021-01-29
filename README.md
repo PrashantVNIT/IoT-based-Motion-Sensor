@@ -172,6 +172,8 @@ Jumper wires are simply wires that have connector pins at each end, allowing the
  
  6. Now copy the key and paste it in the code
  
-### 7. Flow diagram 
+### 8. Flow diagram 
  
  ![](images/23.png)
+
+*****************************************************************************************************************************************************************************
