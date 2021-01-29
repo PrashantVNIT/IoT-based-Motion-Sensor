@@ -40,7 +40,7 @@ This has been selected as the controller for this system due to its compact size
 
 #### b.	PIR sensor
 
-![](images/3.png)   ![](images/4.png)
+ <img src="images/3.png" height="300" >    <img src="images/4.png" width="400" >
 
 ![](images/25.png)   ![](images/26.png)
 
@@ -57,7 +57,7 @@ A passive infrared sensor (PIR sensor) is an electronic sensor which measures in
 
 #### c.	LED
 
-![](images/5.jpg)    ![](images/6.jpg)
+ <img src="images/5.jpg" width="250" >      <img src="images/6.jpg" width="300" >
 
 A light emitting diode (LED) is a semiconductor device that emits visible light when an electric current passes through it.
 
